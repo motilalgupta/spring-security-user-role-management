@@ -14,7 +14,7 @@ public class DemoController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/addUser")
+    @PostMapping("/addUsers")
     public String addUser(@RequestBody UserListRequest request){
         userService.saveUser(request.getUsers());
         return "User added successfully";
